@@ -1,27 +1,21 @@
-import { Header } from './components/Header/Header';
+import { Header, Categories } from './components';
 
 const App = (props) => {
-
-  let onClick = () => {
-    alert(442)
-  }
-
   return (
     <div className="wrapper">
-      <Header onClick={onClick} />
+      <Header />
       <div className="content">
         <div className="container">
           <div className="content__top">
-            <div className="categories">
-              <ul>
-                <li className="active">Все</li>
-                <li>Мясные</li>
-                <li>Вегетарианская</li>
-                <li>Гриль</li>
-                <li>Острые</li>
-                <li>Закрытые</li>
-              </ul>
-            </div>
+            <Categories 
+            onClickItem={(name) => console.log(name)} 
+            items={ [
+              'Мясные',
+              'Вегетарианские',
+              'Гриль',
+              'Острые',
+              'Закрытые'
+            ] } />
             <div className="sort">
               <div className="sort__label">
                 <svg

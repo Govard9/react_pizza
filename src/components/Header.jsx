@@ -1,5 +1,5 @@
-import logoSvg from '../../assets/img/pizza-logo.svg'
-import { Button } from './Button/Button'
+import logoSvg from '../assets/img/pizza-logo.svg'
+import { Button } from './Button'
 
 export const Header = (props) => {
     return (
@@ -17,3 +17,5 @@ export const Header = (props) => {
       </div>
     )
 } 
+
+export default Header;
